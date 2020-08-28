@@ -1,0 +1,28 @@
+
+* Summary
+  I'm a cognitive and data scientist with more than 10 years of experience
+  creating insights from large, complex datasets using computational tools, and
+  communicating those insights to diverse stakeholders.  I have a passion for
+  making computational tools broadly useful through open source software and
+  straightforward and intuitive presentation of difficult computational ideas.
+
+* Skills
+  - Statistics (mixed-effects regression, nonparametric hypothesis testing)
+  - Bayesian inference (MCMC, seqential MC, nonparametrics)
+  - Data visualization
+  - Machine learning 
+
+* Programming languages
+  - R (tidyverse, ggplot, lme4/brms, rstan)
+  - Julia
+  - stan (Bayesian modeling with HMC)
+  - Javascript (node.js, JQuery/frontend)
+  - Python
+  - Matlab
+  - Linux/bash/zsh
+
+  
+* Honors and Awards
+  
+* Education 
+  PhD 
