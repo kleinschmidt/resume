@@ -1,17 +1,93 @@
 \documentclass[10pt,colorlinks,linkcolor=true,urlcolor=gray]{moderncv}
 
 \moderncvtheme[blue, modroman]{classic}
+\usepackage{resume_kleinschmidt}
 
 \name{Dave F.}{Kleinschmidt}
 \email{dave.f.kleinschmidt@gmail.com}
 \homepage{davekleinschmidt.com}
 \social[github]{kleinschmidt}
-\social[twitter]{@kleinschmidt}
-
 
 \begin{document}
 
 \makecvtitle
 
+I'm a cognitive and data scientist with more than 10 years of experience
+creating insights from large, complex datasets using computational tools, and
+communicating those insights to diverse stakeholders.  I have a passion for
+making computational tools broadly useful through open source software and
+straightforward and intuitive presentation of difficult computational ideas.
+
+
+\section{Skills}
+
+\cvcomputer{Statistics}{Linear/logistic regression, mixed-effects models,
+  nonparametric tests}{Bayesian inference}{MCMC, sequential MC, nonparametrics,
+  variational inference}
+
+\cvcomputer{Workflow}{Jupyter notebooks, Rmarkdown, pandoc, make, git, github,
+  TravisCI, docker}{Machine Learning}{Predictive models, classification,
+  clustering, NLP}
+
+\section{Programming Languages}
+
+\cvcomputer{Python}{numpy, pandas, scikit-learn}{R}{tidyverse (dplyr/purrr/tidyr),
+  ggplot2, lme4/brms, rstan}
+
+\cvcomputer{Julia}{DataFrames.jl, GLM.jl, MixedModels.jl,
+  Plots.jl/Gadfly.jl}{Javascript}{Node.js/express, frontend/JQuery}
+
+\cvcomputer{Linux}{bash, zsh, git, server/desktop}{\textit{misc.}}{SQL, Matlab, Java, Lisp,
+  Perl, \LaTeX}
+
+\section{Experience}
+
+\cventry{2018--present}{Assistant Professor of Psychology}{Rutgers
+  University}{New Brunswick, NJ}{}{Direct computational cognitive science lab;
+  Supervise graduate research assistants and staff.\\Design, implement (custom
+  node.js backend), and analyze data (using R and Julia) from \textbf{online
+    behavioral experiments}\\Design and implement machine learning models of
+  human cognition.}
+
+\cventry{2013--present}{Open source maintainer}{JuliaStats
+  organization}{Distributed/remote}{}{Maintain and develop open source
+  software for statistical modeling in Julia language.  Write code and
+  documentation, review contributions, manage releases and automated
+  testing/CI.\\Primary developer of \textbf{StatsModels.jl}, used in 100+
+  packages to transform tabular data to numerical arrays.}
+
+\cventry{2016--2018}{CV Starr Postdoctoral Fellow}{Princeton Neuroscience
+  Institute}{Princeton, NJ}{}{Implemented \textbf{custom Bayesian nonparametric
+    models} of human perception and categorization.\\Co-designed and ran \textbf{weekly
+  open workshop on statistical methods and philosophy} for PhD students and other
+  post-docs (regression, hierarhical models, Bayesian methods)}
+
+\cventry{2010--2016}{PhD research}{Brain and Cognitive Sciences, University of
+  Rochester}{Rochester, NY}{}{Created \textbf{novel Bayesian theory of
+    perceptual learning for speech}, implemented with MCMC sampler in custom R
+  code and Stan.\\Developed javascript platform for web-based auditory
+  psychophysics experiments to test predictions of theory.\\Lead machine
+  learning analysis of multimodal data from brain imaging (fMRI) experiments of
+  human perceptual learning (with Matlab).}
+
+\cventry{2009--2010}{Baggett Fellow}{Linguistics, University of Maryland}{College
+  Park, MD}{}{Designed and taught one-day \textbf{workshop on mixed-effects
+    models and ANOVA} for graduate students, post-docs, and RAs.\\Research on
+  penalized matrix factorization (sparse coding) models of statistical learning
+  (presented at Neurobiology of Language meeting, 2010).}
+
+\section{Education}
+\label{sec:education}
+
+\cventry{2010--2016}{Ph.D. Brain and Cognitive Sciences}{University of
+  Rochester}{Rochester, NY}{}{}
+\cventry{2005--2009}{B.A. Mathematics, concentration Cognitive Science}{Williams College}{Williamstown, MA}{\emph{Summa cum laude}, highest honors in Cognitive Science}{}
+
+\section{Awards}
+\cventry{2017}{Glushko Dissertation Prize}{Cognitive Science Society}{}{}{}
+
+\cventry{2015}{National Research Service Award}{NIH NICHD}{}{}{}
+
+\cventry{2010}{National Graduate Research Fellowship}{NSF}{}{}{}
 
 \end{document}
