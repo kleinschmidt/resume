@@ -1,10 +1,13 @@
 ---
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - "master"
 
 jobs:
-  build-test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -15,3 +18,26 @@ jobs:
         with:
           format: pdf
           filename: resume_kleinschmidt
+
+      - name: Create _site
+        run: |
+          mkdir _site
+          cp resume_kleinschmidt.pdf _site/
+          chmod -c -R +rX "_site/"
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@2
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v2
