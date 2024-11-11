@@ -27,7 +27,7 @@ jobs:
           chmod -c -R +rX "_site/"
 
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@3
+        uses: actions/upload-pages-artifact@v3
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
