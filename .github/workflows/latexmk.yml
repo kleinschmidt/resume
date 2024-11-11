@@ -31,8 +31,9 @@ jobs:
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
-        name: resume_kleinschmidt.pdf
-        path: resume_kleinschmidt.pdf
+        with:
+          name: resume_kleinschmidt.pdf
+          path: resume_kleinschmidt.pdf
 
   deploy:
     if: {{ github.ref == "master" }}
