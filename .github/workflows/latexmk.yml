@@ -1,0 +1,51 @@
+---
+name: CI
+
+on:
+  push:
+    branches:
+      - "master"
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Generate PDF document
+        uses: hspaans/latexmk-action@v1
+        with:
+          format: pdf
+          filename: resume_kleinschmidt
+
+      - name: Create _site
+        run: |
+          mkdir _site
+          cp resume_kleinschmidt.pdf _site/
+          chmod -c -R +rX "_site/"
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume_kleinschmidt.pdf
+          path: resume_kleinschmidt.pdf
+
+  deploy:
+    if: ${{ github.ref == 'master' }}
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v4
