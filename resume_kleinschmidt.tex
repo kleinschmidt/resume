@@ -1,6 +1,7 @@
 \documentclass[10pt,colorlinks,urlcolor=gray]{moderncv}
 
 \moderncvtheme[blue, modroman]{classic}
+\nopagenumbers{}
 \usepackage{resume_kleinschmidt}
 
 \name{Dave F.}{Kleinschmidt}
@@ -12,66 +13,76 @@
 
 \makecvtitle
 
-I'm a software engineer, data scientist, and cognitive scientist with more than
-10 years of experience making complex ideas, data, and systems legible to
-experts and beginners alike.  I have a track record of shipping software that
-people actually use, a passion for making computational tools broadly useful for
-humans through open source software, and a knack for straightforward and
-intuitive presentation of difficult computational ideas in both software and
-written/oral forms.
+I'm a technical leader with more than 10 years of experience making complex ideas, data, and
+systems legible to experts and beginners alike.  I have a track record of shipping software
+that people actually use, a passion for making computational tools broadly useful for humans
+through open source software, and a knack for both building things right and building the
+right things.  I'm a pragmatic generalist who's worn lots of different hats, communicates
+well, is motivated by curiosity, and learns on my feet.
+
+\section{Technologies and Skills}
+
+\cvcomputer{Languages}{Python, Julia, C++, Go, Javascript/node.js, R, Lisp, Java, bash}%
+           {Cloud}{Kubernetes, Docker, AWS (EC2, ECR, EKS, SQS, IAM), Terraform}
+
+\cvcomputer{Software Engineering}{Git, Github (Actions), Linux, CI/CD, build/release automation}%
+           {Machine Learning}{Deep learning, clustering, classification, prediction}
+
+\cvcomputer{Scientific computing}{DSP, time series analysis, modeling, simulation,
+                                  experimentation, reproducibility}%
+           {Statistics}{Regression (linear/logistic, mixed-effects), nonparametrics,
+                        Bayesian \& online stats}
+
+\cvcomputer{Data Engineering}{Postgres, SQL, MongoDB, Arrow, S3, ETL, Kafka, Ray}%
+           {Data Science}{Data cleaning/normalization, exploration, visualization, reporting}
 
 \section{Experience}
 
-\cventry{2022--present}{Senior Algorithm/Research Software Engineer} {Beacon
-  Biosignals}{Remote}{}{As IC and tech lead of Quantitative Tools Team, built
-  out Beacon's \textbf{platform for algorithm development and quantitative
-    work}: data provenance/versioning system used by all algorithm and life
-  science teams, distributed ML training/evaluation capability, distributed
-  batch building for large time-series biosignal datasets
-  (\href{https://github.com/beacon-biosignals/OndaBatches.jl}{OndaBatches.jl}).
-  Tech lead for
-  \href{https://github.com/beacon-biosignals/ray_core_worker_julia_jll.jl}{Julia-language
-    runtime} for \href{https://Ray.io}{Ray.io}.}
+\cventry{2022--present}{Senior Algorithm Engineer (Technical Lead)}{Beacon
+  Biosignals}{Remote}{} {Lead Beacon's first effort for \textbf{productionization,
+    deployment, and operation} of business-critical data ingest and ML processes.  This
+  evolved into Beacon's \textbf{service framework} for production of algorithms/processes.
+  Built out Beacon's \textbf{algorithm development platform}, including: data
+  provenance/versioning system used by all algorithm and data science teams; distributed ML
+  training/evaluation capability
+  (\href{https://www.youtube.com/watch?v=szjMOSuUYU4}{JuliaCon talk on batch building
+    tool}); \href{https://github.com/beacon-biosignals/ray_core_worker_julia_jll.jl}{Julia
+    Ray runtime}.}
 
 \cventry{2021--2022}{Research Scientist}{Beacon Biosignals}{Remote}{}{Developed,
   applied, and interpreted novel statistical and machine learning models to
-  provide insight into human EEG data for clinical and industry partners.  Tech
+  provide insight into human EEG data for industry partners.  Tech
   lead and project manager for quantitative science team handling Beacon's first
   large contract: cleaned, featurized, and analyzed 10,000s of overnight EEG
   recordings from a Phase 3 clinical trial.}
 
-\cventry{2013--present}{Open source maintainer}{JuliaStats
-  organization}{Distributed/remote}{}{Maintain and develop open source software
+\cventry{2013--present}{Open source maintainer}{JuliaStats}{Distributed/remote}{}
+{Maintain and develop open source software
   for statistical modeling in the Julia language.  Write code and documentation,
   review contributions, manage releases and automated testing/CI.  Primary
   developer of \textbf{StatsModels.jl},
   \href{https://juliahub.com/ui/Packages/General/StatsModels/}{used in
-    100+ packages} to transform tabular data to numerical arrays.}
+    100+ packages} to transform tabular data to numerical arrays for modeling.}
 
 \cventry{2018--2021}{Assistant Professor of Psychology}{Rutgers
   University}{New Brunswick, NJ}{}{Directed computational cognitive science lab;
   Supervised graduate research assistants and staff.  Designed, implemented (custom
   node.js+MongoDB backend), and analyzed data (using R and Julia) from \textbf{online
-    behavioral experiments}.  Designed and implement machine learning models of
-  cognition.}
+    behavioral experiments}.  Designed and implemented ML cognitive models.}
 
 \cventry{2016--2018}{CV Starr Postdoctoral Fellow}{Princeton Neuroscience
-  Institute}{Princeton, NJ}{}{Implemented \textbf{custom Bayesian nonparametric
+  Institute}{Princeton, NJ}{}{Implemented \textbf{Bayesian nonparametric
     models} of human perception and categorization.  Co-designed and ran \textbf{weekly
   open workshop on statistical philosophy and methods} for PhD students and other
-  post-docs (regression, hierarchical models, Bayesian methods)}
+  post-docs (regression, hierarchical models, Bayesian methods).}
 
-\cventry{2010--2016}{PhD research}{Brain and Cognitive Sciences, University of
-  Rochester}{Rochester, NY}{}{Created \textbf{novel Bayesian theory of
-    perceptual learning for speech}, implemented with MCMC sampler in custom R
-  code and Stan.  Developed and deployed custom web-based auditory psychophysics
-  experiments in javascript.  Lead machine learning analysis of multimodal data
-  from brain imaging (fMRI) experiments of human perceptual learning.}
+% \cventry{2010--2016}{PhD research}{Brain and Cognitive Sciences, University of
+%   Rochester}{Rochester, NY}{}{Created \textbf{novel Bayesian theory of
+%     perceptual learning for speech}, custom Bayesian samplers, web-based audio
+%   psychophysics platform, data management systems, and ML pipelines for fMRI data.}
 
-\cventry{2009--2010}{Baggett Fellow}{Linguistics, University of
-  Maryland}{College Park, MD}{}{Designed and taught one-day \textbf{workshop on
-    mixed-effects models and ANOVA}.  Research on penalized matrix factorization
-  (sparse coding) models of statistical learning}
+% \cventry{2009--2010}{Baggett Fellow}{Linguistics, University of
+%   Maryland}{College Park, MD}{}{}
 
 \section{Education}
 \label{sec:education}
@@ -81,28 +92,6 @@ written/oral forms.
 \cventry{2005--2009}{B.A. Mathematics, concentration Cognitive Science}{Williams
   College}{Williamstown, MA}{\emph{Summa cum laude}, highest honors in Cognitive
   Science}{}
-
-\section{Skills}
-
-\cvcomputer{Statistics}{Linear/logistic regression, mixed-effects models,
-  nonparametrics, Bayesian methods}{Distributed systems}{Kubernetes,
-  stream/batch processing, Julia multiprocessing, Ray.io}
-
-\cvcomputer{Software Engineering}{Git, Github (Actions), Docker, AWS (EC2, ECR, EKS, SQS),
-  Arrow}{Machine Learning}{Predictive models, classification, clustering, NLP,
-  deep learning}
-
-\section{Programming Languages}
-
-\cvcomputer{Julia}{DataFrames.jl, GLM.jl, MixedModels.jl,
-  Makie.jl, Flux.jl}{R}{tidyverse (dplyr/purrr/tidyr),
-  ggplot2, lme4/brms, rstan}
-
-\cvcomputer{Python}{numpy, pandas, scikit-learn, ray}{Javascript}{Node.js/express,
-  frontend/JQuery}
-
-\cvcomputer{Linux}{bash, zsh, git, server/desktop}{\textit{etc.}}{C++,
-  (Postre)SQL, MongoDB, Matlab, Java, Lisp, Perl, \LaTeX}
 
 \nocite{*}
 \printbibliography[title={Selected Publications}]
