@@ -1,3 +1,4 @@
 *.blg
 *.dvi
 *.out
+*-SAVE-ERROR
